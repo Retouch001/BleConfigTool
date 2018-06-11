@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CG4-wI-cIe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--添加网络-->
+        <scene sceneID="eqD-v1-5sL">
+            <objects>
+                <viewController id="KLJ-g7-OUk" customClass="SSIDPSWViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m6C-Fx-TRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-Fl-Ur0">
+                                <rect key="frame" x="30" y="527" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.59999999999999998" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nyR-SA-L7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="yEf-Gi-bLf" kind="show" id="Iw5-go-Se6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="WiFi名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-4y-ji1" customClass="BaseTextField">
+                                <rect key="frame" x="30" y="313.5" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bKe-5P-DMB"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-BJ-ko6" customClass="BaseTextField">
+                                <rect key="frame" x="30" y="384.5" width="315" height="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bes-D5-u6c">
+                                <rect key="frame" x="30" y="353.5" width="314" height="1"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="c4h-my-EAh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccn-0F-524">
+                                <rect key="frame" x="30" y="424.5" width="314" height="1"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kgg-Fl-Ur0" firstAttribute="leading" secondItem="Fm7-BJ-ko6" secondAttribute="leading" id="2pR-JW-tj0"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="height" secondItem="LNk-4y-ji1" secondAttribute="height" id="6fG-cp-SGr"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="top" secondItem="bes-D5-u6c" secondAttribute="bottom" constant="30" id="Cjf-Me-oCv"/>
+                            <constraint firstItem="LNk-4y-ji1" firstAttribute="leading" secondItem="tMk-4O-yHf" secondAttribute="leading" constant="30" id="Cqf-5p-VgH"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="Dv2-dT-Eyg"/>
+                            <constraint firstItem="LNk-4y-ji1" firstAttribute="centerY" secondItem="m6C-Fx-TRZ" secondAttribute="centerY" id="HFg-S5-Swc"/>
+                            <constraint firstItem="bes-D5-u6c" firstAttribute="top" secondItem="LNk-4y-ji1" secondAttribute="bottom" id="Mgd-KM-Cpq"/>
+                            <constraint firstItem="ccn-0F-524" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="PFk-mk-0qT"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="leading" secondItem="LNk-4y-ji1" secondAttribute="leading" id="Piw-Bq-lYx"/>
+                            <constraint firstItem="Kgg-Fl-Ur0" firstAttribute="width" secondItem="LNk-4y-ji1" secondAttribute="width" id="Umi-HM-buB"/>
+                            <constraint firstItem="bes-D5-u6c" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="bIN-e1-ESH"/>
+                            <constraint firstItem="ccn-0F-524" firstAttribute="top" secondItem="Fm7-BJ-ko6" secondAttribute="bottom" id="cnO-TM-Nl1"/>
+                            <constraint firstItem="ccn-0F-524" firstAttribute="height" secondItem="bes-D5-u6c" secondAttribute="height" id="eWT-cO-SR6"/>
+                            <constraint firstItem="tMk-4O-yHf" firstAttribute="bottom" secondItem="Kgg-Fl-Ur0" secondAttribute="bottom" constant="90" id="jVS-xh-UB4"/>
+                            <constraint firstItem="LNk-4y-ji1" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="kTl-pV-B5P"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="width" secondItem="LNk-4y-ji1" secondAttribute="width" id="krE-EJ-YJ3"/>
+                            <constraint firstItem="Kgg-Fl-Ur0" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="tR3-1E-Omt"/>
+                            <constraint firstItem="bes-D5-u6c" firstAttribute="leading" secondItem="LNk-4y-ji1" secondAttribute="leading" id="tr4-vV-g2C"/>
+                            <constraint firstItem="Fm7-BJ-ko6" firstAttribute="centerX" secondItem="m6C-Fx-TRZ" secondAttribute="centerX" id="uH3-Rt-Cef"/>
+                            <constraint firstItem="ccn-0F-524" firstAttribute="width" secondItem="bes-D5-u6c" secondAttribute="width" id="xmx-d8-mcb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tMk-4O-yHf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加网络" id="n57-Oc-szw"/>
+                    <connections>
+                        <outlet property="psdTextField" destination="Fm7-BJ-ko6" id="IyC-Mc-6Lk"/>
+                        <outlet property="ssidTextField" destination="LNk-4y-ji1" id="kOb-Ek-Ub6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sul-QD-lXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="1028.6356821589206"/>
+        </scene>
+        <!--附近的睡眠带-->
+        <scene sceneID="rfm-Na-BoV">
+            <objects>
+                <tableViewController id="MWz-45-t7t" customClass="DeviceConfigTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ydd-IT-9tV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="MWz-45-t7t" id="kV0-zY-kYW"/>
+                            <outlet property="delegate" destination="MWz-45-t7t" id="dzR-ZM-ve9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="附近的睡眠带" id="vI7-6d-IFz">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" style="plain" id="TWY-sH-uLg">
+                            <connections>
+                                <action selector="rightBarItemClick:" destination="MWz-45-t7t" id="tbN-40-Jz4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4u-Lu-I9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="1029"/>
+        </scene>
+        <!--附近的睡眠带-->
+        <scene sceneID="zl8-QY-asg">
+            <objects>
+                <viewController title="附近的睡眠带" id="yEf-Gi-bLf" customClass="DeviceConfigViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Av5-i1-vk7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B9p-NH-mDp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="附近的睡眠带" id="28C-3v-r1L">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="QNQ-nc-TAv">
+                            <connections>
+                                <action selector="rightBarItemClick:" destination="yEf-Gi-bLf" id="Ij6-Tr-PCY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ee-vo-kiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815" y="1769"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0oH-PU-78C">
+            <objects>
+                <navigationController id="CG4-wI-cIe" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Idr-Fs-ZKg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94509803921568625" green="0.59999999999999998" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KLJ-g7-OUk" kind="relationship" relationship="rootViewController" id="sBR-hf-FsN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFy-PG-OVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1647" y="1029"/>
+        </scene>
+    </scenes>
+</document>
